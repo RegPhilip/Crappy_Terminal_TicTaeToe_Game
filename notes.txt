@@ -1,0 +1,32 @@
+This is the tic-tac-toe grid
+
+   |   |
+---+---+---
+   |   |
+---+---+---
+   |   |
+
+The entire grid is five lines longs
+The odd-numbed lines can be repeated
+The even-numded lines can also be repeated, but will contain different things inside the cells
+
+Each cell has a number assignmed to it called Cell#
+  
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+To turn cursor postions into Cell#, use this formula
+ 
+ Cell# = ( ( (cx - 2) / 4) + 1 ) + ( ( (cy - 2) / 2 ) * 3)
+
+ P1 is represented as 1 while P2 is represented as -1
+
+ The Grid_State will be a array that can hold nine elements, each location in the array with either be 1 or -1
+
+Every turn, four checks will be performed
+
+If the result of a check is 3, then P1 wins. Likewise, If the result is -3, P2 wins
+
